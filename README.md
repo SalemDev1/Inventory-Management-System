@@ -1,2 +1,2 @@
 # Inventory-Management-System
-This system will handle the storage of product information, calculate stock levels, check for low inventory, and track sales. You’ll use objects to represent products, arrays to store the inventory, and control structures to manage stock checks and updates.
+This system is designed to manage and track product information, inventory levels, and sales. By utilizing object-oriented programming, the system efficiently handles key processes such as stock level calculation, low inventory alerts, and sales tracking.
