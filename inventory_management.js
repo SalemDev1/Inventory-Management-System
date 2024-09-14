@@ -47,3 +47,14 @@ function checkLowStock(products) {
     console.log(`Products which are now low in stock: ${lowStockProducts}`);
 }
 checkLowStock(inventory);
+//Outputs "Products which are now low in stock: Gaming PC,Caniac Combo"
+
+// Task 5- Create a Function to Calculate Total Inventory Value
+function calculateInventoryValue(products) {
+    let totalValue = 0;
+    for (let i = 0; i < products.length; i++) {
+        totalValue += products[i].price * products[i].quantity;
+    }
+    return totalValue;
+}
+console.log("Total Inventory Value: $"+ calculateInventoryValue(inventory));
