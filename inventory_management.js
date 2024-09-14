@@ -5,7 +5,7 @@ const inventory= [
     { name: 'Gaming PC', price: 1200, quantity: 10, lowStockLevel: 3 },
     { name: 'Valorant', price: 50, quantity: 5, lowStockLevel: 2 },
     { name: 'GTA VI', price: 500, quantity: 7, lowStockLevel: 1 },
-    { name: 'Caniac Combo', price: 16, quantity: 15, lowStockLevel: 5 },
+    { name: 'Caniac Combo', price: 16, quantity: 5, lowStockLevel: 5 },
     { name: 'Stardew Valley', price: 250, quantity: 3, lowStockLevel: 1 }
 ];
 
@@ -35,3 +35,15 @@ else if (products.quantity == 0) {
 };
 updateStock(inventory[0],7);
 // Outputs "Gaming PC is now Low Stock as the quanity changed 3"
+
+// Task 4- Create a Function to Check Low Stock Products
+function checkLowStock(products) {
+    let lowStockProducts =[];
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].quantity <= products[i].lowStockLevel) {
+            lowStockProducts.push(products[i].name);
+        }
+    }
+    console.log(`Products which are now low in stock: ${lowStockProducts}`);
+}
+checkLowStock(inventory);
