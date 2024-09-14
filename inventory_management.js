@@ -8,3 +8,17 @@ const inventory= [
     { name: 'Caniac Combo', price: 16, quantity: 15, lowStockLevel: 5 },
     { name: 'Stardew Valley', price: 250, quantity: 3, lowStockLevel: 1 }
 ];
+
+//Task 2- Create a Function to Display Product Details
+function displayProductDetails(products) {
+    for(let i=0;i<products.length;i++){ 
+        if (products[i].lowStockLevel< 3) {
+            console.log(`Product: ${products[i].name}, Price: ${products[i].price}, Quantity: ${products[i].quantity}, Status: Low Stock `);
+        }
+        else {
+            console.log(`Product: ${products[i].name}, Price: ${products[i].price}, Quantity: ${products[i].quantity}, Status: In Stock `);
+        }   
+    }
+}
+displayProductDetails(inventory);
+// Outputs the product’s name, price, quantity in stock, and stock status
